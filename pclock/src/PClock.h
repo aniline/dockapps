@@ -29,7 +29,6 @@
 #include <unistd.h>
 
 #define NAME "pclock"
-#define CLASS "PClock"
 
 #ifndef TRUE
 #define TRUE 1
@@ -43,23 +42,21 @@
 #define STRING_LENGTH 256
 
 /* needs to be an even divisor of 1e6 */
-#define PERIOD 200000L
+#define PERIOD 200L
 
 typedef struct options {
   int under_windowmaker, show_seconds;
   int hand_width, second_hand_width;
   int hour_hand_length, minute_hand_length, second_hand_length;
-  char hand_color[STRING_LENGTH], second_hand_color[STRING_LENGTH];
-  char background_pixmap[STRING_LENGTH];
+  char *hand_color, *second_hand_color;
+  char *background_pixmap;
 } options;
 
 extern options option;
 
-void CreateWindow(int, char *[]);
-void DestroyWindow(void);
-
+void GraphicsInit(int ac, char *av[]);
+void GraphicsClose(void);
 void UpdateClock(void);
-void HandleEvents(int *);
 
 #endif
 

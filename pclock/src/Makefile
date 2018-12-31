@@ -9,7 +9,7 @@ INCDIR = -I/usr/X11R6/include -I.
 LIBDIR = -L/usr/X11R6/lib
 CC = gcc
 CFLAGS = -O -s -Wall
-LIBS = -lXpm -lXext -lX11 -lm
+LIBS = -lXpm -lXext -lX11 -lm -ldockapp
 
 ###############################################################################
 
