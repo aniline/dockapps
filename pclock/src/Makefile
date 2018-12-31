@@ -1,7 +1,7 @@
 BINDIR = /usr/X11R6/bin
 
 PROG = pclock
-OBJS = Main.o Graphics.o getopt.o getopt1.o
+OBJS = Main.o Graphics.o
 
 DEFAULT_XPM = round-3d.xpm
 
